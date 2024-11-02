@@ -56,8 +56,11 @@ class Question:
     _answer: Answer = Answer.missing()
 
     def present(self) -> None:
-        print(
-            f"Question: {self._left_operand} {self._operator.stringify()} {self._right_operand} = ?"
+        print(f"Question: {self.formatted()} = ?")
+
+    def formatted(self) -> str:
+        return (
+            f"{self._left_operand} {self._operator.stringify()} {self._right_operand}"
         )
 
     def answered_with(self, answer: int) -> "Answer":
@@ -148,7 +151,7 @@ def random_integer_from(start: int, /, *, to: int) -> int:
 
 def random_operator() -> Operator:
     """Generates a random operator from the set of supported operators.
-    
+
     Example:
         >>> operator = random_operator()
         >>> operator.stringify()
