@@ -106,15 +106,6 @@ class QuestionSet:
         )
         print(f"\nGame over! Your score is: {correct_count}/{self.question_count}")
 
-    def _left_operand(self) -> int:
-        return random_integer_from(self.left_range[0], to=self.right_range[1])
-
-    def _right_operand(self) -> int:
-        return random_integer_from(self.right_range[0], to=self.right_range[1])
-
-    def _operator(self) -> Operator:
-        return random_operator()
-
     @dataclass
     class Builder:
         question_count: int
@@ -132,6 +123,15 @@ class QuestionSet:
                 left_range=self.left_range,
                 right_range=(start, to),
             )
+
+    def _left_operand(self) -> int:
+        return random_integer_from(self.left_range[0], to=self.right_range[1])
+
+    def _right_operand(self) -> int:
+        return random_integer_from(self.right_range[0], to=self.right_range[1])
+
+    def _operator(self) -> Operator:
+        return random_operator()
 
 
 def random_integer_from(start: int, /, *, to: int) -> int:
