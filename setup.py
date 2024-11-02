@@ -16,6 +16,11 @@ setup(
     description="A simple math quiz game",
     keywords="math, quiz, game",
     url="https://github.com/zuka011/DSSS-Homework-2",
+        entry_points={
+        'console_scripts': [
+            'math_quiz=math_quiz.main:main',
+        ],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
