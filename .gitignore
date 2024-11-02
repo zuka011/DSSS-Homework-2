@@ -2,3 +2,5 @@
 __pycache__
 .hypothesis
 .ruff_cache
+build
+*.egg-info
