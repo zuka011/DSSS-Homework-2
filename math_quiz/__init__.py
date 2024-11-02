@@ -6,4 +6,5 @@ from .math_quiz import (
     Addition as Addition,
     Subtraction as Subtraction,
     Multiplication as Multiplication,
+    math_quiz as math_quiz,
 )
