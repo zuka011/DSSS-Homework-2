@@ -16,9 +16,9 @@ setup(
     description="A simple math quiz game",
     keywords="math, quiz, game",
     url="https://github.com/zuka011/DSSS-Homework-2",
-        entry_points={
-        'console_scripts': [
-            'math_quiz=math_quiz.math_quiz:main',
+    entry_points={
+        "console_scripts": [
+            "math_quiz=math_quiz.math_quiz:math_quiz",
         ],
     },
     classifiers=[
