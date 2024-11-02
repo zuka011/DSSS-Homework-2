@@ -18,7 +18,7 @@ setup(
     url="https://github.com/zuka011/DSSS-Homework-2",
         entry_points={
         'console_scripts': [
-            'math_quiz=math_quiz.main:main',
+            'math_quiz=math_quiz.math_quiz:main',
         ],
     },
     classifiers=[
